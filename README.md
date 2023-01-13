@@ -10,30 +10,43 @@ To get started with this project.
 1. Clone the repository to your local workstation
 
 2. Install CDK 
-```npm install aws-cdk-lib```
-
-3. Bootstrap CDK 
-```cdk bootstrap```
-
-4. Install the required packages:
-```npm install```
-
-5. Export environment variables that will be used in the next steps:
-```export CLUSTER_NAME=mycluster
-   export AWS_ACCOUNT_ID="$(aws sts get-caller-identity --query Account --output text)"
-   export GIT_REPO=myDemo
-   export AWS_REGION=us-east-1
+```
+npm install aws-cdk-lib
 ```
 
-Note: You can change the region to reflect the location where you want to deploy the code sample. 
+3. Bootstrap CDK 
+
+```
+cdk bootstrap
+```
+
+4. Install the required packages:
+
+```
+npm install
+```
+
+5. Export environment variables that will be used in the next steps:
+```
+export CLUSTER_NAME=mycluster
+export AWS_ACCOUNT_ID="$(aws sts get-caller-identity --query Account --output text)"
+export GIT_REPO=myDemo
+export AWS_REGION=us-east-1
+```
+
+**Note: You can change the region to reflect the location where you want to deploy the code sample.** 
 
 6. Execute the following command to allow CodeBuild to deploy the sample application on EKS: 
 
-```eksctl create iamidentitymapping --cluster ${CLUSTER_NAME} --region ${AWS_REGION} --arn arn:aws:iam::${AWS_ACCOUNT_ID}:role/codeBuildDeployRole --group system:masters```
+```
+eksctl create iamidentitymapping --cluster ${CLUSTER_NAME} --region ${AWS_REGION} --arn arn:aws:iam::${AWS_ACCOUNT_ID}:role/codeBuildDeployRole --group system:masters
+```
 
 7. Deploy the code sample to create the end-to-end CI/CD pipeline: 
  
-```cdk deploy --parameters notificationEmail=xxx@yyy.com --parameters notifyPhone=+9999999999 --parameters gitRepoName=${GIT_REPO} --parameters clusterName=${CLUSTER_NAME}```
+```
+cdk deploy --parameters notificationEmail=xxx@yyy.com --parameters notifyPhone=+9999999999 --parameters gitRepoName=${GIT_REPO} --parameters clusterName=${CLUSTER_NAME}
+```
 
 The code sample deploys the following resources:
 
