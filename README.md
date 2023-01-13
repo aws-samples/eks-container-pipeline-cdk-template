@@ -1,4 +1,4 @@
-# Welcome to the DevOps SSP sample container pipeline
+# Welcome to the EKS sample container pipeline
 
 This is a CDK TypeScript project that packages a [Cluster Sample App](https://github.com/sdpoueme/cluster-sample-app) into a container. Containers are a great fit for workloads because they’re lightweight, start quickly, and optimize the utilization of the underlying instance. The Sample App container is a quick start solution that can be used to bootstrap kubernetes projects.
 
