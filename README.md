@@ -1,6 +1,6 @@
 # Welcome to the EKS sample container pipeline
 
-This is a CDK TypeScript project that packages a [Cluster Sample App](https://github.com/sdpoueme/cluster-sample-app) into a container. Containers are a great fit for workloads because they’re lightweight, start quickly, and optimize the utilization of the underlying instance. The Sample App container is a quick start solution that can be used to bootstrap kubernetes projects.
+This is a CDK TypeScript project that packages a [Cluster Sample App](https://github.com/aws-samples/cluster-sample-app) into a container. Containers are a great fit for workloads because they’re lightweight, start quickly, and optimize the utilization of the underlying instance. The Sample App container is a quick start solution that can be used to bootstrap kubernetes projects.
 
 
 **Note: you must have an EKS cluster deployed as pre-requisite. You can follow the instructions defined [here](https://eksctl.io/usage/creating-and-managing-clusters/) to create a cluster.**
